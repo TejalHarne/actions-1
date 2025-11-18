@@ -8,13 +8,20 @@ jobs:
         steps:
             - name: checkout-repo
               uses: actions/checkout@v5
-            - name: welcome message
-              run: echo "github action"
 
-            - name: List files
-              run: ls
+            - name: List and Read File
+              run:
+                 echo "github action"
+                 ls -ltra
+                 cat README.md
 
-            - name: Read file
-              run: cat README.md
+            - name: Genertae ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...R" >> dragon.txt
+
+         #   - name: List files
+           #   run: ls
+
+           # - name: Read file
+            #  run: cat README.md
 
 
